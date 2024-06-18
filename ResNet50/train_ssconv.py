@@ -249,13 +249,13 @@ def draw_acc():
 
 if __name__ == '__main__':
 
-    # count_parameters(net)
-    #
-    # for epoch in range(start_epoch, end_epoch):
-    #     train_loss, train_acc = train(epoch)
-    #     test_loss, test_acc = test(epoch)
-    #     scheduler.step()
-    #
-    #     save_csv(epoch, train_loss, train_acc, test_loss, test_acc)
+    count_parameters(net)
+    
+    for epoch in range(start_epoch, end_epoch):
+        train_loss, train_acc = train(epoch)
+        test_loss, test_acc = test(epoch)
+        scheduler.step()
+    
+        save_csv(epoch, train_loss, train_acc, test_loss, test_acc)
 
     draw_acc()
